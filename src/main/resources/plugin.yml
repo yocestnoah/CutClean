@@ -1,0 +1,9 @@
+name: CutClean
+version: 1.0
+main: net.noah.cutclean.CutClean
+api-version: '1.20'
+load: STARTUP
+commands:
+  cutclean:
+    description: Command to manage CutClean scenario.
+    usage: /cutclean <enable/disable/description>
