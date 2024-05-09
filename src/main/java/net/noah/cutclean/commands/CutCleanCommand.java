@@ -9,54 +9,38 @@ import org.bukkit.command.CommandSender;
 
 public class CutCleanCommand implements CommandExecutor {
 
-    private final CutClean plugin;
-
-    public CutCleanCommand(CutClean plugin) {
-        this.plugin = plugin;
-    }
+    public CutCleanCommand(CutClean plugin) {}
 
     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String string, String[] args) {
-
-        if(!commandSender.hasPermission(CutClean.PERMISSION)) {
-            commandSender.sendMessage(CutClean.PREFIX + ChatColor.RED + "You do not have permission to use this command.");
-            return true;
+    public boolean onCommand(CommandSender sender, Command command, String string, String[] args) {
+        if(!sender.hasPermission(CutClean.PERMISSION)) {
+            sender.sendMessage(CutClean.PREFIX + ChatColor.RED + "You do not have permission to use this command."); return true;
         }
 
         if (args.length == 0) {
-            commandSender.sendMessage(CutClean.PREFIX + "Usage: /cutclean <enable/disable/description>");
-            return true;
+            sender.sendMessage(CutClean.PREFIX + "Usage: /cutclean <enable/disable/description>"); return true;
         }
 
         if(args[0].equalsIgnoreCase("description")) {
-            commandSender.sendMessage(CutClean.PREFIX + CutClean.DESCRIPTION);
-            return true;
+            sender.sendMessage(CutClean.PREFIX + CutClean.DESCRIPTION); return true;
         }
 
         if(args[0].equalsIgnoreCase("enable")) {
             if(CutClean.status) {
-                commandSender.sendMessage(CutClean.PREFIX + "CutClean is already enabled.");
-                return true;
+                sender.sendMessage(CutClean.PREFIX + "CutClean is already enabled."); return true;
             }
-
             CutClean.status = true;
-            Bukkit.broadcastMessage(CutClean.PREFIX + "CutClean has been enabled.");
-
-            return true;
+            Bukkit.broadcastMessage(CutClean.PREFIX + "CutClean has been enabled."); return true;
         }
 
         if(args[0].equalsIgnoreCase("disable")) {
          if(!CutClean.status) {
-             commandSender.sendMessage(CutClean.PREFIX + "CutClean is not enabled.");
-             return true;
+             sender.sendMessage(CutClean.PREFIX + "CutClean is not enabled."); return true;
          }
-
             CutClean.status = false;
-            Bukkit.broadcastMessage(CutClean.PREFIX + "CutClean has been disabled.");
-            return true;
+            Bukkit.broadcastMessage(CutClean.PREFIX + "CutClean has been disabled."); return true;
         }
 
-        commandSender.sendMessage(CutClean.PREFIX + "Usage: /cutclean <enable/disable/description>");
-        return true;
+        sender.sendMessage(CutClean.PREFIX + "Usage: /cutclean <enable/disable/description>"); return true;
     }
 }

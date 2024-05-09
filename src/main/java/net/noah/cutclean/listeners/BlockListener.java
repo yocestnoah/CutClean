@@ -20,7 +20,6 @@ public class BlockListener implements Listener {
             Block block = event.getBlock();
 
             if(player.getGameMode() != GameMode.CREATIVE) {
-
                 ExperienceOrb experience = player.getWorld().spawn(player.getLocation(), ExperienceOrb.class);
 
                 switch(block.getType()) {
@@ -28,19 +27,15 @@ public class BlockListener implements Listener {
                     case DEEPSLATE_IRON_ORE:
                     case COPPER_ORE:
                     case DEEPSLATE_COPPER_ORE:
-                        experience.setExperience(1);
-                        break;
+                        experience.setExperience(1); break;
                     case RAW_IRON_BLOCK:
                     case RAW_COPPER_BLOCK:
-                        experience.setExperience(9);
-                        break;
+                        experience.setExperience(9); break;
                     case GOLD_ORE:
                     case DEEPSLATE_GOLD_ORE:
-                        experience.setExperience(2);
-                        break;
+                        experience.setExperience(2); break;
                     case RAW_GOLD_BLOCK:
-                        experience.setExperience(18);
-                        break;
+                        experience.setExperience(18); break;
                 }
             }
         }

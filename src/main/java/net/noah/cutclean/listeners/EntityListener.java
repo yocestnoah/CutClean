@@ -18,56 +18,40 @@ public class EntityListener implements Listener {
             Item droppedItem = event.getEntity();
 
             switch (droppedItem.getItemStack().getType()) {
-
                 case RAW_IRON:
                 case IRON_ORE:
-                    droppedItem.setItemStack(new ItemStack(Material.IRON_INGOT));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.IRON_INGOT)); break;
                 case RAW_IRON_BLOCK:
-                    droppedItem.setItemStack(new ItemStack(Material.IRON_BLOCK));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.IRON_BLOCK)); break;
                 case RAW_GOLD:
                 case GOLD_ORE:
-                    droppedItem.setItemStack(new ItemStack(Material.GOLD_INGOT));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.GOLD_INGOT)); break;
                 case RAW_GOLD_BLOCK:
-                    droppedItem.setItemStack(new ItemStack(Material.GOLD_BLOCK));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.GOLD_BLOCK)); break;
                 case RAW_COPPER:
                 case COPPER_ORE:
-                    droppedItem.setItemStack(new ItemStack(Material.COPPER_INGOT));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.COPPER_INGOT)); break;
                 case RAW_COPPER_BLOCK:
-                    droppedItem.setItemStack(new ItemStack(Material.COPPER_BLOCK));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.COPPER_BLOCK)); break;
 
                 case BEEF:
-                    droppedItem.setItemStack(new ItemStack(Material.COOKED_BEEF));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.COOKED_BEEF)); break;
                 case PORKCHOP:
-                    droppedItem.setItemStack(new ItemStack(Material.COOKED_PORKCHOP));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.COOKED_PORKCHOP)); break;
                 case MUTTON:
-                    droppedItem.setItemStack(new ItemStack(Material.COOKED_MUTTON));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.COOKED_MUTTON)); break;
                 case CHICKEN:
-                    droppedItem.setItemStack(new ItemStack(Material.COOKED_CHICKEN));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.COOKED_CHICKEN)); break;
                 case RABBIT:
-                    droppedItem.setItemStack(new ItemStack(Material.COOKED_RABBIT));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.COOKED_RABBIT)); break;
                 case COD:
-                    droppedItem.setItemStack(new ItemStack(Material.COOKED_COD));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.COOKED_COD)); break;
                 case SALMON:
-                    droppedItem.setItemStack(new ItemStack(Material.COOKED_SALMON));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.COOKED_SALMON)); break;
                 case POTATO:
-                    droppedItem.setItemStack(new ItemStack(Material.BAKED_POTATO));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.BAKED_POTATO)); break;
                 case KELP:
-                    droppedItem.setItemStack(new ItemStack(Material.DRIED_KELP));
-                    break;
+                    droppedItem.setItemStack(new ItemStack(Material.DRIED_KELP)); break;
             }
         }
     }

@@ -22,6 +22,5 @@ public final class CutClean extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new EntityListener(), this);
         getServer().getPluginManager().registerEvents(new BlockListener(), this);
-
     }
 }
